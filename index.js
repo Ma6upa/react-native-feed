@@ -7,7 +7,7 @@ Navigation.registerComponent('Article', () => ArticleScreen);
 
 Navigation.setDefaultOptions({
   statusBar: {
-    backgroundColor: '#4d089a'
+    backgroundColor: '#000'
   },
   topBar: {
     title: {
@@ -17,12 +17,13 @@ Navigation.setDefaultOptions({
       color: 'white'
     },
     background: {
-      color: '#4d089a'
+      color: '#fd5904'
     }
   },
   bottomTab: {
-    fontSize: 14,
-    selectedFontSize: 14
+    fontSize: 16,
+    selectedFontSize: 18,
+    selectedTextColor: '#fd5904',
   }
 });
 
