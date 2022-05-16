@@ -1,14 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
-import ViewNativeComponent from 'react-native/Libraries/Components/View/ViewNativeComponent';
+import { Text, View } from 'react-native';
 import ChosenArticle from '../components/chosenArticle';
 
-const ArticleScreen = () => {
+const ArticleScreen = (props) => {
   return (
-    <ViewNativeComponent>
+    <View>
       <Text>Article Page!</Text>
       <ChosenArticle />
-    </ViewNativeComponent>
+    </View>
   );
 }
 

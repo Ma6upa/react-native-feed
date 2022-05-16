@@ -1,15 +1,15 @@
 import { makeAutoObservable } from "mobx";
 
 class currentElement {
-  currentElement = {}
+  chosenArticle = {}
 
   constructor() {
     makeAutoObservable(this)
   }
 
-  chooseArticle(article) {
-    this.currentElement = article;
+  chooseArticle(item) {
+    this.chosenArticle = item;
   }
 }
 
-export default currentElement;
+export default new currentElement();

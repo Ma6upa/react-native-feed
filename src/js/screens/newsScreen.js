@@ -1,14 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
-import ViewNativeComponent from 'react-native/Libraries/Components/View/ViewNativeComponent';
+import { Text, View } from 'react-native';
 import NewsList from '../components/newsList';
 
-const NewsScreen = () => {
+const NewsScreen = (props) => {
   return (
-    <ViewNativeComponent>
+    <View>
       <Text>News Page!</Text>
-      <NewsList />
-    </ViewNativeComponent>
+      <NewsList componentId={props.componentId} />
+    </View>
   );
 }
 
