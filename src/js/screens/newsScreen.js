@@ -1,12 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import NewsList from '../components/newsList';
 
-const NewsScreen = (props) => {
+const NewsScreen = () => {
   return (
     <View>
-      <Text>News Page!</Text>
-      <NewsList componentId={props.componentId} />
+      <NewsList />
     </View>
   );
 }

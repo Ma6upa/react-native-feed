@@ -3,9 +3,9 @@ import { Text, FlatList, View, SafeAreaView, Alert, TouchableOpacity, ActivityIn
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import currentElement from '../store/currentElement';
-import { Navigation } from 'react-native-navigation';
+import styles from '../styles/newsListStyles';
 
-const NewsList = (props) => {
+const NewsList = () => {
   const [news, setNews] = useState([]);
   const [error, setError] = useState(false)
 
@@ -48,11 +48,6 @@ const NewsList = (props) => {
 
   const onItemPress = (item) => {
     currentElement.chooseArticle(item)
-    Navigation.push(props.componentId, {
-      component: {
-        name: 'Article'
-      }
-    })
   }
 
   const renderItem = ({ item }) => (
@@ -61,7 +56,9 @@ const NewsList = (props) => {
 
   const Item = ({ item }) => (
     <TouchableOpacity onPress={() => onItemPress(item)}>
-      <Text>{item.title}</Text>
+      <View style={styles.container}>
+        <Text style={styles.textstyle}>{item.title}</Text>
+      </View>
     </TouchableOpacity>
   );
 
